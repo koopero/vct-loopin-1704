@@ -1,0 +1,14 @@
+render/kinascii:
+  src: kinect
+  shader: kinascii
+  mesh: kinascii
+  camera: main
+  clear: true
+  depthTest: true
+
+mesh/kinascii:
+  plane:
+    cols: 80
+    rows: 25
+    split: true
+  aspect: 1.333

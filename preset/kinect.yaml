@@ -1,0 +1,7 @@
+kinect/kinect_live: true
+
+render/kinect:
+  shader: kinect
+  tex/feedback:
+    buffer: kinect
+    filter: linear

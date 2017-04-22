@@ -1,0 +1,26 @@
+{
+  "name": "vct-loopin-1704",
+  "version": "1.0.0",
+  "description": "Loopin Demo for Vancouver Creative Technology Meetup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vct-loopin-1704": "./src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koopero/vct-loopin-1704.git"
+  },
+  "author": "Samm Cooper <samm@sublight.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koopero/vct-loopin-1704/issues"
+  },
+  "homepage": "https://github.com/koopero/vct-loopin-1704#readme",
+  "dependencies": {
+    "config": "^1.25.1",
+    "horten": "^0.8.1"
+  }
+}

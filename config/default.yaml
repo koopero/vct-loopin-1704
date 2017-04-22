@@ -1,0 +1,24 @@
+debug:
+  verbose: true
+
+server:
+  listen: 80
+  dirs:
+    - control
+    - preset
+    - shader
+    - image
+    - data
+
+  index: control/controls.md
+
+  page:
+    title: VCT Loopin Apr 2017
+
+    nav:
+      - title: Master
+        src: control/controls.md
+      - title: Kinect
+        src: control/kinect.md
+      - title: Kinascii
+        src: control/kinascii.md
