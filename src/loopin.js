@@ -14,8 +14,8 @@ loopin.imageDir()
 loopin.shaderDir()
 
 loopin.preset('setup')
-loopin.preset('kinascii')
-loopin.preset('kinect')
+// loopin.preset('kinascii')
+// loopin.preset('kinect')
 
 
 loopin.plugin( require('./logic/recorder' ) )
