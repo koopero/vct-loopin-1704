@@ -1,7 +1,15 @@
-kinect/kinect_live: true
+
+buffer/kinect:
+  width: 1280
+  height: 480
+  format: rgb32
 
 render/kinect:
   shader: kinect
+
+  src/buffer: kinect_live
+  src/filter: linear
+
   tex/feedback:
     buffer: kinect
     filter: linear

@@ -2,9 +2,18 @@ render/kinascii:
   src: kinect
   shader: kinascii
   mesh: kinascii
-  camera: main
+  camera: kinascii
   clear: true
   depthTest: true
+  blend: alpha
+  tex:
+    charset: kinascii_charset
+    palette:
+      buffer: kinascii_palette
+      filter: linear
+
+buffer/kinascii:
+  useDepth: true
 
 mesh/kinascii:
   plane:
@@ -12,3 +21,13 @@ mesh/kinascii:
     rows: 25
     split: true
   aspect: 1.333
+
+buffer/kinascii_palette:
+  width: 5
+  height: 1
+  format: rgba32
+
+pixels/kinascii_palette:
+  format: hex
+  channels: rgba
+  pixels: ff0000 ffff00

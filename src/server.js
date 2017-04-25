@@ -3,3 +3,6 @@ const config = require('config')
     , server = loopin.plugin( require('loopin-server'), config.get('server') )
 
 module.exports = server
+
+if ( module == require.main )
+  server.open()

@@ -1,16 +1,7 @@
 module.exports = recorder
 
-recorder.options = require('boptions')({
-  buffer: 'kinect',
-  prefix: 'data/frame/a.',
-  format: 'jpg',
-  enabled: false,
-  rate: 4
-})
-
-
 function recorder() {
-  const opt = new H.Mutant( recorder.options( arguments ) )
+  const opt = new H.Mutant( {} )
       , loopin = this
 
   var _saving

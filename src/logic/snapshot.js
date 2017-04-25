@@ -1,15 +1,10 @@
 module.exports = snapshot
 const H = require('horten')
 
-snapshot.options = require('boptions')({
-  buffer: 'main',
-  prefix: 'data/snap/snap.'
-})
-
 
 function snapshot() {
   const loopin = this
-      , opt = snapshot.options( arguments )
+      , opt = {}
 
   loopin.plugin('save')
 

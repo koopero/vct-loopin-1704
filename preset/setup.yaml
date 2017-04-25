@@ -1,9 +1,0 @@
-show: foo
-
-buffer/foo:
-  width: 2
-  height: 1
-
-pixels/foo:
-  pixels: ff0000 0000ff
-  format: hex

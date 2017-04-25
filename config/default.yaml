@@ -2,7 +2,7 @@ debug:
   verbose: true
 
 server:
-  listen: 80
+  listen: 8080
   dirs:
     - control
     - preset
@@ -12,13 +12,15 @@ server:
 
   index: control/controls.md
 
+  persist: data/persist.yaml
+
   page:
     title: VCT Loopin Apr 2017
 
     nav:
       - title: Master
-        src: control/controls.md
+        page: control/controls.md
       - title: Kinect
-        src: control/kinect.md
+        page: control/kinect.md
       - title: Kinascii
-        src: control/kinascii.md
+        page: control/kinascii.md

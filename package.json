@@ -21,6 +21,8 @@
   "homepage": "https://github.com/koopero/vct-loopin-1704#readme",
   "dependencies": {
     "config": "^1.25.1",
-    "horten": "^0.8.1"
+    "horten": "^0.8.1",
+    "loopin-server": "^0.1.1",
+    "serve-index": "^1.8.0"
   }
 }

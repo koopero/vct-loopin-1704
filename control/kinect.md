@@ -1,12 +1,21 @@
 # Kinect
 
+``` control
+path: loopin/show/buffer
+options:
+  - kinect_live
+  - kinect
+  - kinascii
+```
+
+
 ## Source
 
 ``` control
 path: loopin/render/kinect/src/buffer
 options:
   - kinect_live
-  - kinect_test 
+  - kinect_test
 ```
 
 ## Filter
@@ -14,6 +23,12 @@ options:
 
 
 ## Hardware
+``` control
+path: loopin/kinect/kinect_live/
+trigger: true
+title: Enable Kinect
+```
+
 ``` control
 path: loopin/kinect/kinect_live/
 subs:
