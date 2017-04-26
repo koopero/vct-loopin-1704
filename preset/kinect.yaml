@@ -2,7 +2,7 @@
 buffer/kinect:
   width: 1280
   height: 480
-  format: rgb32
+  format: rgb
 
 render/kinect:
   shader: kinect

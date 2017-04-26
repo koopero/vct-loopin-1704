@@ -24,6 +24,7 @@ void main()
   float alpha = outputColour.a;
   int col = int( alpha * charsetRows );
   // coord.x += round( outputColour.a * float(charsetRows) );
+  coord.x = 1. - coord.x;
   coord.x += col;
   coord.x /= float(charsetRows);
 

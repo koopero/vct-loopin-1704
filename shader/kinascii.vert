@@ -27,6 +27,8 @@ uniform int   kinectDepthSamples = 1;
 uniform float quadFace = 0.1;
 uniform float quadFaceW = 0.1;
 uniform float quadFaceH = 0.1;
+uniform float quadExpand = 1.25;
+
 
 
 // this is something we're creating for this shader
@@ -84,8 +86,10 @@ void main()
 
   float zSlope = tan(kinectFOV/180.0*3.1415926/2.0);
 
+  vec2 quadCentreScreen = quadCentre * 2.0 - vec2(1.0,1.0);
+
   vec4 pos = position;
-  pos.xy = mix( position.xy, quadCentre * 2.0 - vec2(1.0,1.0), quadFace );
+  pos.xy = mix( quadCentreScreen + ( position.xy - quadCentreScreen ) * quadExpand, quadCentreScreen, quadFace );
   pos.x *= -1.0;
   pos.z = zSource;
 

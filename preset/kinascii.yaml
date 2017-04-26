@@ -11,6 +11,9 @@ render/kinascii:
     palette:
       buffer: kinascii_palette
       filter: linear
+      wrap: clamp
+
+image/kinascii_charset: image/kinascii_charset.png
 
 buffer/kinascii:
   useDepth: true
@@ -25,9 +28,8 @@ mesh/kinascii:
 buffer/kinascii_palette:
   width: 5
   height: 1
-  format: rgba32
+  format: rgba
 
 pixels/kinascii_palette:
   format: hex
   channels: rgba
-  pixels: ff0000 ffff00

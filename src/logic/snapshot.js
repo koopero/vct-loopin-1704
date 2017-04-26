@@ -6,34 +6,36 @@ function snapshot() {
   const loopin = this
       , opt = {}
 
+
   loopin.plugin('save')
 
   const cursor = new H.Cursor( {
     listening: true,
-    path: 'logic/snapshot',
+    path: 'logic/snapshot/snap',
     onValue
   } )
 
   return
 
   function onValue( v ) {
-    console.log('ON VALUE', v)
-    if ( !v )
-      return
-
-    if ( v.snap ) {
-      snap( v.snap )
+    if ( v ) {
+      snap()
     }
   }
 
   function filename( t ) {
     const ext = '.jpg'
-        , base = opt.prefix + t.toFixed(0) + ext
+        , base = 'data/snapshot/'+opt.buffer+'.' + t.toFixed(0) + ext
 
     return loopin.filesResolve( base )
   }
 
   function snap() {
+    opt.buffer = H.root.get('logic/snapshot/buffer')
+
+    if ( !opt.buffer )
+      return
+
     const t = new Date().getTime()
         , file = filename( t )
 

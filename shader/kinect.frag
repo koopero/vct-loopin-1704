@@ -2,6 +2,9 @@
 uniform sampler2D srcSampler;
 uniform sampler2D feedbackSampler;
 
+uniform float feedbackAmount = 1.0;
+uniform float fillAmount = 1.0;
+
 
 in vec2 srcCoord;
 out vec4 outputColour;
@@ -49,7 +52,7 @@ void main()
   } else {
     // Sample is depth
     float depth = texture(srcSampler, srcCoord).g;
-    float amount = 0.25;
+    float amount = 1.0 - feedbackAmount;
     float feedback = texture(feedbackSampler, srcCoord).g;
 
     if ( depth < kinectBlackThreshold ) {
@@ -58,12 +61,12 @@ void main()
 
     if ( depth < kinectBlackThreshold ) {
       depth = resample( feedbackSampler, srcCoord, 3.0, 5 );
-      amount = 0.5;
+      amount = 1.0 - fillAmount;
     }
 
     depth = feedback + ( depth - feedback ) * amount;
 
     outputColour = vec4( depth, depth, depth, 1.0 );
   }
-  
+
 }

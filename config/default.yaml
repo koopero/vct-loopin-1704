@@ -18,9 +18,11 @@ server:
     title: VCT Loopin Apr 2017
 
     nav:
-      - title: Master
+      - title: Intro
         page: control/controls.md
-      - title: Kinect
-        page: control/kinect.md
       - title: Kinascii
         page: control/kinascii.md
+      - title: Kinect
+        page: control/kinect.md
+      - title: Extras
+        page: control/extras.md
